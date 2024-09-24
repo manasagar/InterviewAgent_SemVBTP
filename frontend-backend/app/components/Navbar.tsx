@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-white shadow-md py-4 mb-16">
+    <nav className="bg-white shadow-md py-4 mb-8">
       <div className="container mx-auto flex justify-between items-center px-6 lg:px-12">
         {/* Logo Section */}
         <Link
@@ -16,10 +16,10 @@ export default function Navbar() {
         {/* Navigation Links */}
         <div className="space-x-6">
           <Link
-            href="/responsibility"
+            href="/docs"
             className="text-gray-700 hover:text-blue-600 transition duration-300"
           >
-            Responsibility
+            Docs
           </Link>
           <Link
             href="/discover"
@@ -34,7 +34,7 @@ export default function Navbar() {
             Build
           </Link>
           <Link
-            href="/why-ai"
+            href="/apif"
             className="text-gray-700 hover:text-blue-600 transition duration-300"
           >
             API
