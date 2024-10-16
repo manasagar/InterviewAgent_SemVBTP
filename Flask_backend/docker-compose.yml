@@ -1,0 +1,25 @@
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:5000"
+    depends_on:
+      - python-container
+      - nodejs-container
+    volumes:
+      - ./app:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  python-container:
+    image: python:3.9-slim
+    container_name: python-container
+    stdin_open: true
+    tty: true
+
+  nodejs-container:
+    image: node:14
+    container_name: nodejs-container
+    stdin_open: true
+    tty: true
